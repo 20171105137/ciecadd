@@ -50,6 +50,9 @@ class ViewController: UIViewController {
     
     
     
+    
+    
+    
     @IBAction func add7(_ sender: Any) {
         label.text = label.text!+"7"
     }
@@ -62,10 +65,15 @@ class ViewController: UIViewController {
     
     
     
+    @IBAction func ButtonSub(_ sender: Any) {
+        temp = Int( label.text!)!
+        label.text = ""
+    }
+    
+    
     @IBAction func add9(_ sender: Any) {
         label.text = label.text!+"9"
     }
-    
     
     
     
@@ -74,6 +82,14 @@ class ViewController: UIViewController {
         sum  = temp + Int(label.text!)!
         label.text = "\(sum)"
     }
+    
+    
+  
+
+    
+    
+    
+    
     
     
 

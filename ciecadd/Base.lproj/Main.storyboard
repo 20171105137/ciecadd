@@ -119,6 +119,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="9"/>
+                                <connections>
+                                    <action selector="add9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K4y-N8-BKk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZS-Rv-zOh">
                                 <rect key="frame" x="41" y="370" width="46" height="48"/>
@@ -127,6 +130,15 @@
                                 <state key="normal" title="7"/>
                                 <connections>
                                     <action selector="add7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6o2-B7-nPW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEx-Ab-nqk">
+                                <rect key="frame" x="242" y="149" width="30" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="ButtonSub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HIM-ok-3gn"/>
                                 </connections>
                             </button>
                         </subviews>
