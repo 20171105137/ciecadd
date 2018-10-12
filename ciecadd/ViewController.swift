@@ -13,7 +13,7 @@ var flag = 0
 
 
 class ViewController: UIViewController {
-    var temp = 0
+    var temp:Double = 0
    
     @IBOutlet  var label: UITextField!
     
@@ -58,30 +58,43 @@ class ViewController: UIViewController {
         label.text = label.text!+"0"
     }
     
+    @IBAction func point(_ sender: Any) {
+        label.text = label.text! + "."
+    }
     
+    //判断是否字符串中包含小数点
+    func doesStringContainDecimal(string:String) ->Bool{
+        for ch in string
+        {
+            if ch == "."{
+                return  true
+            }
+        }
+        return false
+    }
     
     
     
    // 等于号
     @IBAction func ButtonEqual(_ sender: Any) {
         if(flag==1){
-            var sum = 0
-            sum = temp + Int(label.text!)!
+            var sum:Double = 0
+            sum = temp + Double(label.text!)!
             label.text = "\(sum)"
         }
         if(flag==2){
-            var subtraction = 0
-            subtraction = temp - Int(label.text!)!
+            var subtraction:Double = 0
+            subtraction = temp - Double(label.text!)!
             label.text = "\(subtraction)"
         }
         if(flag==3){
-            var multiplication = 0
-            multiplication = temp * Int(label.text!)!
+            var multiplication:Double = 0
+            multiplication = temp * Double(label.text!)!
             label.text = "\(multiplication)"
         }
         if(flag==4){
-            var division = 0
-            division = temp / Int(label.text!)!
+            var division:Double = 0
+            division = temp / Double(label.text!)!
             label.text = "\(division)"
         }
     }
@@ -92,28 +105,28 @@ class ViewController: UIViewController {
 //运算符
     
     @IBAction func ButtonAdd(_ sender: Any) {
-        temp = Int( label.text!)!
+        temp = Double( label.text!)!
         label.text = ""
         flag = 1
     }
     
     
     @IBAction func ButtonSUB(_ sender: Any) {
-        temp = Int( label.text!)!
+        temp = Double( label.text!)!
         label.text = ""
         flag = 2
     }
     
     
     @IBAction func ButtonMUL(_ sender: Any) {
-        temp = Int( label.text!)!
+        temp = Double( label.text!)!
         label.text = ""
         flag = 3
     }
     
     
     @IBAction func ButtonDIV(_ sender: Any) {
-        temp = Int( label.text!)!
+        temp = Double( label.text!)!
         label.text = ""
         flag = 4
     }
@@ -128,7 +141,7 @@ class ViewController: UIViewController {
     
     @IBAction func AllClear(_ sender: Any) {
         label.text = "0"
-        temp = Int(label.text!)!
+        temp = Double(label.text!)!
         label.text = ""
     }
     
