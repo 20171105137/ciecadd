@@ -75,6 +75,19 @@ class ViewController: UIViewController {
     
     
     
+    @IBAction func decimalBtn(_ sender: Any) {
+        if (label.text) == {
+            let string = label.text! + "-"
+            label.text = string
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
    // 等于号
     @IBAction func ButtonEqual(_ sender: Any) {
         if(flag==1){
