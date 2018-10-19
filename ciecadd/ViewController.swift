@@ -10,6 +10,9 @@ import UIKit
 
 var temp = 0
 var flag = 0
+var labelvalue = 0
+
+
 
 
 class ViewController: UIViewController {
@@ -75,12 +78,10 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func decimalBtn(_ sender: Any) {
-        if (label.text) == {
-            let string = label.text! + "-"
-            label.text = string
-            
-        }
+    @IBAction func decimalBtn(_ sender: Any) {//正负号
+        labelvalue = Int(Double(label.text!)!)
+        label.text = "\(labelvalue * -1)"
+
     }
     
     
