@@ -10,7 +10,7 @@ import UIKit
 
 var temp = 0
 var flag = 0
-var labelvalue = 0
+var labelvalue:Double = 0
 
 
 
@@ -79,14 +79,19 @@ class ViewController: UIViewController {
     
     
     @IBAction func decimalBtn(_ sender: Any) {//正负号
-        labelvalue = Int(Double(label.text!)!)
+        labelvalue = Double(label.text!)!
         label.text = "\(labelvalue * -1)"
 
     }
     
+    @IBAction func x2(_ sender: Any) {//平方
+        labelvalue =  Double(label.text!)!
+        labelvalue = labelvalue * labelvalue
+        label.text = "\(labelvalue)"
+        
+    }
     
-    
-    
+ 
     
     
    // 等于号
