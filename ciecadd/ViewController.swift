@@ -9,7 +9,7 @@
 import UIKit
 
 var temp = 0
-var flag = 0
+var flag:Int = 0
 var labelvalue:Double = 0
 
 
@@ -22,7 +22,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func add1(_ sender: Any) {
-      label.text = label.text!+"1"
+        label.text = label.text!+"1"
+        
+        
     }
    
     @IBAction func add2(_ sender: Any) {
@@ -84,37 +86,34 @@ class ViewController: UIViewController {
 
     }
     
-    @IBAction func x2(_ sender: Any) {//平方
-        labelvalue =  Double(label.text!)!
-        labelvalue = labelvalue * labelvalue
-        label.text = "\(labelvalue)"
-        
-    }
-    
  
-    
-    
    // 等于号
-    @IBAction func ButtonEqual(_ sender: Any) {
+    @IBAction func ButtonEqual(_ sender: Any) {//+
         if(flag==1){
             var sum:Double = 0
             sum = temp + Double(label.text!)!
             label.text = "\(sum)"
         }
-        if(flag==2){
+        if(flag==2){//-
             var subtraction:Double = 0
             subtraction = temp - Double(label.text!)!
             label.text = "\(subtraction)"
         }
-        if(flag==3){
+        if(flag==3){//X
             var multiplication:Double = 0
             multiplication = temp * Double(label.text!)!
             label.text = "\(multiplication)"
         }
-        if(flag==4){
+        if(flag==4){//÷
             var division:Double = 0
             division = temp / Double(label.text!)!
             label.text = "\(division)"
+        }
+        if(flag==5){//x2
+            var x2:Double = 0
+            
+            x2 = temp * temp
+            label.text = "\(x2)"
         }
     }
     
@@ -124,9 +123,9 @@ class ViewController: UIViewController {
 //运算符
     
     @IBAction func ButtonAdd(_ sender: Any) {
+        flag = 1
         temp = Double( label.text!)!
         label.text = ""
-        flag = 1
     }
     
     
@@ -150,6 +149,22 @@ class ViewController: UIViewController {
         flag = 4
     }
     
+    @IBAction func x2(_ sender: Any) {//平方
+        flag = 5
+        temp =  Double(label.text!)!
+      //  temp = temp * temp
+     //   label.text = "\(temp)"
+        
+    }
+    
+    
+    @IBAction func sign(_ sender: Any) {//根号
+        flag = 6
+        temp = Double(label.text!)!
+        temp = sqrt(temp)
+        label.text = "\(temp)"
+    }
+    
     
     
     //清空label
@@ -159,9 +174,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func AllClear(_ sender: Any) {
+        temp = 0
+        flag = 0
+        labelvalue = 0
+     
+     //   temp = Double(label.text!)!
         label.text = "0"
-        temp = Double(label.text!)!
-        label.text = ""
+           label.text = ""
     }
     
  
