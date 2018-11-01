@@ -11,7 +11,7 @@ import UIKit
 var temp = 0
 var flag:Int = 0
 var labelvalue:Double = 0
-
+var seeagain = 0
 
 
 
@@ -22,49 +22,105 @@ class ViewController: UIViewController {
     
     
     @IBAction func add1(_ sender: Any) {
-        label.text = label.text!+"1"
+        if seeagain == 1{
+            label.text = label.text!+"1"
+        }else{
+            label.text = "1"
+        }
+        seeagain = 1
+        
         
         
     }
    
     @IBAction func add2(_ sender: Any) {
-       label.text = label.text!+"2"
+        if seeagain == 1{
+            label.text = label.text!+"2"
+        }else{
+            label.text = "2"
+        }
+        seeagain = 1
     }
   
     @IBAction func add3(_ sender: Any) {
-        label.text = label.text!+"3"
+        if seeagain == 1{
+            label.text = label.text!+"3"
+        }else{
+            label.text = "3"
+        }
+        seeagain = 1
     }
   
     @IBAction func add4(_ sender: Any) {
-        label.text = label.text!+"4"
+        if seeagain == 1{
+            label.text = label.text!+"4"
+        }else{
+            label.text = "4"
+        }
+        seeagain = 1
     }
    
     @IBAction func add5(_ sender: Any) {
-        label.text = label.text!+"5"
+        if seeagain == 1{
+            label.text = label.text!+"5"
+        }else{
+            label.text = "5"
+        }
+        seeagain = 1
     }
   
     @IBAction func add6(_ sender: Any) {
-        label.text = label.text!+"6"
+        if seeagain == 1{
+            label.text = label.text!+"6"
+        }else{
+            label.text = "6"
+        }
+        seeagain = 1
     }
 
     @IBAction func add7(_ sender: Any) {
-        label.text = label.text!+"7"
+        if seeagain == 1{
+            label.text = label.text!+"7"
+        }else{
+            label.text = "7"
+        }
+        seeagain = 1
     }
 
     @IBAction func add8(_ sender: Any) {
-        label.text = label.text!+"8"
+        if seeagain == 1{
+            label.text = label.text!+"8"
+        }else{
+            label.text = "8"
+        }
+        seeagain = 1
     }
 
     @IBAction func add9(_ sender: Any) {
-        label.text = label.text!+"9"
+        if seeagain == 1{
+            label.text = label.text!+"9"
+        }else{
+            label.text = "9"
+        }
+        seeagain = 1
     }
     
     @IBAction func add0(_ sender: Any) {
-        label.text = label.text!+"0"
+        if seeagain == 1{
+            label.text = label.text!+"0"
+        }else{
+            label.text = "0"
+        }
+        seeagain = 1
     }
     
     @IBAction func point(_ sender: Any) {
-        label.text = label.text! + "."
+        if seeagain == 1{
+            label.text = label.text!+"."
+        }else{
+            label.text = "."
+        }
+        seeagain = 1
     }
     
     //判断是否字符串中包含小数点
@@ -90,31 +146,35 @@ class ViewController: UIViewController {
    // 等于号
     @IBAction func ButtonEqual(_ sender: Any) {//+
         if(flag==1){
+            label.text = "\(temp + Double(label.text!)!)"
             var sum:Double = 0
             sum = temp + Double(label.text!)!
             label.text = "\(sum)"
         }
+        seeagain=2
+        
         if(flag==2){//-
+            label.text = "\(temp + Double(label.text!)!)"
             var subtraction:Double = 0
             subtraction = temp - Double(label.text!)!
             label.text = "\(subtraction)"
         }
+        seeagain=2
         if(flag==3){//X
+            label.text = "\(temp + Double(label.text!)!)"
             var multiplication:Double = 0
             multiplication = temp * Double(label.text!)!
             label.text = "\(multiplication)"
         }
+        seeagain=2
         if(flag==4){//÷
+            label.text = "\(temp + Double(label.text!)!)"
             var division:Double = 0
             division = temp / Double(label.text!)!
             label.text = "\(division)"
         }
-        if(flag==5){//x2
-            var x2:Double = 0
-            
-            x2 = temp * temp
-            label.text = "\(x2)"
-        }
+        seeagain=2
+ //
     }
     
     
@@ -150,22 +210,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func x2(_ sender: Any) {//平方
-        flag = 5
+      
         temp =  Double(label.text!)!
+        var x2:Double = 0
+        x2 = temp * temp
+        label.text = "\(x2)"
       //  temp = temp * temp
      //   label.text = "\(temp)"
+        
         
     }
     
     
     @IBAction func sign(_ sender: Any) {//根号
-        flag = 6
+
         temp = Double(label.text!)!
         temp = sqrt(temp)
         label.text = "\(temp)"
     }
     
-    
+
     
     //清空label
     @IBAction func clear(_ sender: Any) {
@@ -174,13 +238,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func AllClear(_ sender: Any) {
-        temp = 0
+        temp = 0.00
         flag = 0
         labelvalue = 0
-     
+        seeagain = 0
      //   temp = Double(label.text!)!
         label.text = "0"
-           label.text = ""
+          // label.text = ""
     }
     
  
