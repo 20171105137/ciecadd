@@ -35,6 +35,7 @@ class ViewController: UIViewController {
    
     @IBAction func add2(_ sender: Any) {
         if seeagain == 1{
+            label.text = ""
             label.text = label.text!+"2"
         }else{
             label.text = "2"
@@ -44,6 +45,7 @@ class ViewController: UIViewController {
   
     @IBAction func add3(_ sender: Any) {
         if seeagain == 1{
+            label.text = ""
             label.text = label.text!+"3"
         }else{
             label.text = "3"
@@ -53,6 +55,7 @@ class ViewController: UIViewController {
   
     @IBAction func add4(_ sender: Any) {
         if seeagain == 1{
+            label.text = ""
             label.text = label.text!+"4"
         }else{
             label.text = "4"
@@ -62,15 +65,19 @@ class ViewController: UIViewController {
    
     @IBAction func add5(_ sender: Any) {
         if seeagain == 1{
+            label.text = ""
             label.text = label.text!+"5"
         }else{
+            
             label.text = "5"
         }
         seeagain = 1
+        
     }
   
     @IBAction func add6(_ sender: Any) {
         if seeagain == 1{
+            label.text = ""
             label.text = label.text!+"6"
         }else{
             label.text = "6"
@@ -80,6 +87,7 @@ class ViewController: UIViewController {
 
     @IBAction func add7(_ sender: Any) {
         if seeagain == 1{
+            label.text = ""
             label.text = label.text!+"7"
         }else{
             label.text = "7"
@@ -89,6 +97,7 @@ class ViewController: UIViewController {
 
     @IBAction func add8(_ sender: Any) {
         if seeagain == 1{
+            label.text = ""
             label.text = label.text!+"8"
         }else{
             label.text = "8"
@@ -98,6 +107,7 @@ class ViewController: UIViewController {
 
     @IBAction func add9(_ sender: Any) {
         if seeagain == 1{
+            label.text = ""
             label.text = label.text!+"9"
         }else{
             label.text = "9"
@@ -107,6 +117,7 @@ class ViewController: UIViewController {
     
     @IBAction func add0(_ sender: Any) {
         if seeagain == 1{
+            label.text = ""
             label.text = label.text!+"0"
         }else{
             label.text = "0"
