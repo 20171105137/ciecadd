@@ -118,7 +118,7 @@ class ViewController: UIViewController {
         if seeagain == 1{
             label.text = label.text!+"."
         }else{
-            label.text = "."
+            label.text = "0"+"."
         }
         seeagain = 1
     }
@@ -146,34 +146,30 @@ class ViewController: UIViewController {
    // 等于号
     @IBAction func ButtonEqual(_ sender: Any) {//+
         if(flag==1){
-            label.text = "\(temp + Double(label.text!)!)"
             var sum:Double = 0
             sum = temp + Double(label.text!)!
             label.text = "\(sum)"
         }
-        seeagain=2
+       
         
         if(flag==2){//-
-            label.text = "\(temp + Double(label.text!)!)"
             var subtraction:Double = 0
             subtraction = temp - Double(label.text!)!
             label.text = "\(subtraction)"
         }
-        seeagain=2
+        
         if(flag==3){//X
-            label.text = "\(temp + Double(label.text!)!)"
             var multiplication:Double = 0
             multiplication = temp * Double(label.text!)!
             label.text = "\(multiplication)"
         }
-        seeagain=2
+        
         if(flag==4){//÷
-            label.text = "\(temp + Double(label.text!)!)"
             var division:Double = 0
             division = temp / Double(label.text!)!
             label.text = "\(division)"
         }
-        seeagain=2
+       
  //
     }
     
@@ -183,30 +179,48 @@ class ViewController: UIViewController {
 //运算符
     
     @IBAction func ButtonAdd(_ sender: Any) {
-        flag = 1
+        if flag == 1{
+            label.text = "\(temp + Double(label.text!)!)"
+        }
         temp = Double( label.text!)!
-        label.text = ""
+        seeagain = 2
+        flag = 1
+        //label.text = ""
     }
     
     
     @IBAction func ButtonSUB(_ sender: Any) {
+        if flag == 2{
+            label.text = "\(temp - Double(label.text!)!)"
+        }
         temp = Double( label.text!)!
-        label.text = ""
+        seeagain = 2
         flag = 2
+       // label.text = ""
     }
     
     
     @IBAction func ButtonMUL(_ sender: Any) {
+        if flag == 3{
+            label.text = "\(temp * Double(label.text!)!)"
+        }
         temp = Double( label.text!)!
-        label.text = ""
+        seeagain = 2
         flag = 3
+        label.text = ""
+        
     }
     
     
     @IBAction func ButtonDIV(_ sender: Any) {
+        if flag == 4 {
+            label.text = "\(temp / Double(label.text!)!)"
+        }
         temp = Double( label.text!)!
-        label.text = ""
+        seeagain = 2
         flag = 4
+        label.text = ""
+        
     }
     
     @IBAction func x2(_ sender: Any) {//平方
@@ -242,8 +256,8 @@ class ViewController: UIViewController {
         flag = 0
         labelvalue = 0
         seeagain = 0
-     //   temp = Double(label.text!)!
-        label.text = "0"
+       // temp = Double(label.text!)!
+        label.text = "\(temp)"
           // label.text = ""
     }
     
