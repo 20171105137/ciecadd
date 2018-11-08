@@ -12,7 +12,7 @@ var temp = 0
 var flag:Int = 0
 var labelvalue:Double = 0
 var seeagain = 0
-
+var hao:Int = 0
 
 
 class ViewController: UIViewController {
@@ -150,6 +150,11 @@ class ViewController: UIViewController {
             var sum:Double = 0
             sum = temp + Double(label.text!)!
             label.text = "\(sum)"
+            if(seeagain==2){
+                label.text = "\(sum)"
+               // seeagain = 1
+            }
+            
         }
        
         
@@ -186,7 +191,8 @@ class ViewController: UIViewController {
         temp = Double( label.text!)!
         seeagain = 2
         flag = 1
-        //label.text = ""
+        
+     //   label.text = ""
     }
     
     
@@ -197,7 +203,7 @@ class ViewController: UIViewController {
         temp = Double( label.text!)!
         seeagain = 2
         flag = 2
-       // label.text = ""
+    //   label.text = ""
     }
     
     
@@ -208,7 +214,7 @@ class ViewController: UIViewController {
         temp = Double( label.text!)!
         seeagain = 2
         flag = 3
-        label.text = ""
+   //     label.text = ""
         
     }
     
@@ -220,7 +226,7 @@ class ViewController: UIViewController {
         temp = Double( label.text!)!
         seeagain = 2
         flag = 4
-        label.text = ""
+   //     label.text = ""
         
     }
     
@@ -258,8 +264,8 @@ class ViewController: UIViewController {
         labelvalue = 0
         seeagain = 0
        // temp = Double(label.text!)!
-        label.text = "\(temp)"
-          // label.text = ""
+       // label.text = "\(temp)"
+           label.text = "0"
     }
     
  
