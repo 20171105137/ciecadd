@@ -187,8 +187,10 @@ class ViewController: UIViewController {
     @IBAction func ButtonAdd(_ sender: Any) {
         if flag == 1{
             label.text = "\(temp + Double(label.text!)!)"
+            label.text = String(format:"%.3f",temp)
         }
         temp = Double( label.text!)!
+        label.text = String(format:"%.3f",temp)
         seeagain = 2
         flag = 1
         
@@ -199,8 +201,10 @@ class ViewController: UIViewController {
     @IBAction func ButtonSUB(_ sender: Any) {
         if flag == 2{
             label.text = "\(temp - Double(label.text!)!)"
+            label.text = String(format:"%.3f",temp)
         }
         temp = Double( label.text!)!
+        label.text = String(format:"%.3f",temp)
         seeagain = 2
         flag = 2
     //   label.text = ""
@@ -210,8 +214,10 @@ class ViewController: UIViewController {
     @IBAction func ButtonMUL(_ sender: Any) {
         if flag == 3{
             label.text = "\(temp * Double(label.text!)!)"
+            label.text = String(format:"%.3f",temp)
         }
         temp = Double( label.text!)!
+        label.text = String(format:"%.3f",temp)
         seeagain = 2
         flag = 3
    //     label.text = ""
@@ -222,8 +228,10 @@ class ViewController: UIViewController {
     @IBAction func ButtonDIV(_ sender: Any) {
         if flag == 4 {
             label.text = "\(temp / Double(label.text!)!)"
+            label.text = String(format:"%.3f",temp)
         }
         temp = Double( label.text!)!
+        label.text = String(format:"%.3f",temp)
         seeagain = 2
         flag = 4
    //     label.text = ""
