@@ -190,7 +190,7 @@ class ViewController: UIViewController {
             label.text = String(format:"%.3f",temp)
         }
         temp = Double( label.text!)!
-        label.text = String(format:"%.3f",temp)
+
         seeagain = 2
         flag = 1
         
@@ -204,7 +204,7 @@ class ViewController: UIViewController {
             label.text = String(format:"%.3f",temp)
         }
         temp = Double( label.text!)!
-        label.text = String(format:"%.3f",temp)
+
         seeagain = 2
         flag = 2
     //   label.text = ""
@@ -217,7 +217,7 @@ class ViewController: UIViewController {
             label.text = String(format:"%.3f",temp)
         }
         temp = Double( label.text!)!
-        label.text = String(format:"%.3f",temp)
+
         seeagain = 2
         flag = 3
    //     label.text = ""
@@ -231,7 +231,7 @@ class ViewController: UIViewController {
             label.text = String(format:"%.3f",temp)
         }
         temp = Double( label.text!)!
-        label.text = String(format:"%.3f",temp)
+
         seeagain = 2
         flag = 4
    //     label.text = ""
